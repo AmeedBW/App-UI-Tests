@@ -1,0 +1,36 @@
+appId: com.bloomandwild.bloomandwildapp.dev
+---
+- launchApp:
+    clearState: true
+- assertVisible:
+    text: We care about your privacy
+- tapOn:
+    text: 'Reject All'
+- assertVisible:
+    text: 'Ask App Not to Track'
+    optional: true
+- tapOn:
+    text: 'Allow'
+    optional: true
+- assertVisible:
+    text: 'Shop Now'
+- tapOn:
+    text: 'Shop Now'
+- tapOn:
+    text: 'Browse'
+- extendedWaitUntil:
+    visible:
+      text: 'Never miss a thing'
+    timeout: 21000
+- tapOn:
+    text: 'Yes please'
+- tapOn:
+    text: '  Refine'
+- assertVisible:
+    id: 'Sort'
+- tapOn:
+    text: 'Price: Low to High'
+- tapOn:
+    text: 'Refine range'
+- assertVisible:
+    text: 'All'

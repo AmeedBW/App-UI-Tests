@@ -1,0 +1,63 @@
+appId: com.bloomandwild.bloomandwildapp.dev
+---
+- launchApp:
+    clearState: true
+- assertVisible:
+    text: 'We care about your privacy'
+- tapOn:
+    text: 'Accept All'
+- assertVisible:
+    text: 'Ask App Not to Track'
+    optional: true
+- tapOn:
+    text: 'Allow'
+    optional: true
+- assertVisible:
+    text: 'Shop Now'
+- tapOn:
+    text: 'Shop Now'
+- assertVisible:
+    text: 'Never miss a thing'
+    optional: true
+- tapOn:
+    text: 'Yes please'
+    optional: true
+- tapOn:
+    id: 'home'
+- assertVisible:
+    text: 'Saved Occasions'
+    optional: true
+- tapOn:
+    text: 'Saved Occasions'
+- tapOn:
+    text: 'Add Occasion'
+- assertVisible:
+    text: 'Add new Occasion'
+- tapOn:
+    id: 'nameTextField'
+- inputRandomPersonName
+- tapOn:
+    text: 'Date'
+- tapOn:
+    text: '15'
+- tapOn:
+    text: 'Save date'
+- tapOn:
+    id: 'emailTextField'
+- inputText: 'testingdevice+androidtest1@bloomandwild.com'
+- tapOn:
+    id: 'passTextField'
+- inputText: 'testpassword'
+- assertVisible:
+    text: 'Create account'
+- tapOn:
+    text: 'Continue'
+- extendedWaitUntil:
+    visible:
+      text: 'Home'
+    timeout: 25000
+- tapOn:
+    text: 'Don.*Allow'
+    optional: true
+- tapOn:
+    id: 'home'
