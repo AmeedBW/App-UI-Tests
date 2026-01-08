@@ -1,0 +1,107 @@
+appId: com.bloomandwild.bloomandwildapp.dev
+---
+- launchApp:
+    clearState: true
+- assertVisible:
+    text: We care about your privacy
+- tapOn:
+    text: 'Reject all'
+- assertVisible:
+    text: 'Ask App Not to Track'
+    optional: true
+- tapOn:
+    text: 'Allow'
+    optional: true
+- assertVisible:
+    text: 'Shop Now'
+- tapOn:
+    text: 'Log in'
+- tapOn:
+    id: 'emailTextField'
+- inputText: 'testingdevice+androidtest1@bloomandwild.com'
+- extendedWaitUntil:
+    visible:
+      id: 'passTextField'
+- tapOn:
+    id: 'passTextField'
+- inputText: 'testpassword'
+- assertVisible:
+    text: 'Create account'
+- tapOn:
+    text: 'Continue'
+- extendedWaitUntil:
+    visible:
+      text: 'All'
+    timeout: 25000
+- extendedWaitUntil:
+    visible:
+      text: 'Never miss a thing'
+    timeout: 25000
+- assertVisible:
+    text: 'Never miss a thing'
+    optional: true
+- tapOn:
+    id: 'closeBtn'
+    optional: true
+- scroll
+- tapOn:
+    id: 'sendBtn'
+- tapOn:
+    text: 'Continue to delivery details'
+    optional: true
+- tapOn:
+    text: 'Continue to delivery details'
+    optional: true
+- tapOn:
+    text: 'Recipient'
+- assertVisible:
+    text: 'Continue'
+    optional: true
+- tapOn:
+    text: 'Don.*Allow'
+    optional: true
+- tapOn:
+    point: '50%,37%'
+- tapOn:
+    text: 'Save'
+- tapOn:
+    text: 'plusIcon'
+- tapOn:
+    text: 'Add photo'
+- tapOn:
+    id: 'plusIcon'
+- extendedWaitUntil:
+    visible:
+      text: 'Photos'
+    timeout: 25000
+- tapOn:
+    point: '55%, 45%'
+- tapOn:
+    text: 'Save cover'
+- tapOn:
+    text: 'Add message'
+- inputRandomText
+- tapOn:
+    text: 'Done'
+- tapOn:
+    text: 'Continue to delivery details'
+- tapOn:
+    text: 'Review & pay'
+- tapOn:
+    optional: true
+    id: 'choose payment cards subtitle'
+- inputText: '4242424242424242'
+- inputText: '1138'
+- inputText: '333'
+- tapOn:
+    text: 'Save'
+    optional: true
+- tapOn:
+    text: 'Buy Now'
+- waitForAnimationToEnd
+- extendedWaitUntil:
+    visible:
+      text: 'Thank you for your order!'
+    timeout: 45000
+- assertVisible:
+    text: 'Thank you for your order!'
