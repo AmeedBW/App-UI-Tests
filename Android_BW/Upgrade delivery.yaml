@@ -1,0 +1,58 @@
+appId: com.bloomandwild.staging
+---
+- launchApp:
+    clearState: true
+- assertVisible:
+    text: 'We care about your privacy'
+- tapOn:
+    id: 'com.bloomandwild.staging:id/ucButtonText'
+- assertVisible:
+    text: 'Show someone you care wildly'
+- tapOn:
+    text: 'Log in'
+- assertVisible:
+    text: 'Log In'
+- tapOn:
+    text: 'Email'
+- inputText: 'testingdevice+androidtest1@bloomandwild.com'
+- tapOn:
+    text: 'Password'
+- inputText: 'testpassword'
+- tapOn:
+    text: 'Log in with email'
+- tapOn:
+    text: 'Browse'
+- assertVisible:
+    text: 'Get 15% off'
+    optional: true
+- waitForAnimationToEnd
+- tapOn:
+    optional: true
+    text: 'Dismiss'
+- tapOn:
+    optional: true
+    text: 'Close Subscription Card'
+- scrollUntilVisible:
+    element:
+      text: 'The Anna'
+- tapOn:
+    text: 'The Anna'
+- assertVisible:
+    text: 'The Anna'
+- tapOn:
+    text: 'Send'
+- tapOn:
+    text: 'Continue without adding anything'
+    optional: true
+- assertVisible:
+    text: 'Delivery'
+- tapOn:
+    text: 'Upgrade'
+- assertVisible:
+    text: 'Select Postage'
+- tapOn:
+    text: 'DPD Premium Delivery'
+- tapOn:
+    text: 'Save'
+- assertVisible:
+    text: 'DPD Premium Delivery'
