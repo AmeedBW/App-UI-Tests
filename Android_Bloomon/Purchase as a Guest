@@ -1,0 +1,67 @@
+appId: com.bloomon.staging
+---
+- launchApp:
+    clearState: true
+- waitForAnimationToEnd
+- tapOn:
+    text: 'Alles accepteren'
+- tapOn:
+    text: 'SHOP NU'
+- extendedWaitUntil:
+    visible:
+      optional: true
+      text: 'Ontvang 15% korting'
+- tapOn:
+    optional: true
+    text: 'Dismiss'
+- scroll
+- scroll
+- tapOn:
+    text: 'VERZENDEN'
+- tapOn:
+    optional: true
+    text: 'DOORGAAN ZONDER IETS TOE TE VOEGEN'
+- tapOn:
+    text: 'Ontvanger'
+- tapOn:
+    text: 'Ontvanger'
+- inputRandomPersonName
+- tapOn:
+    text: 'Adres'
+- inputText: 'Helmholtzstraat 61E'
+- tapOn:
+    point: '50%,26%'
+- tapOn:
+    text: 'OPSLAAN'
+- tapOn:
+    text: 'OPSLAAN'
+- tapOn:
+    text: 'VOEG TOE AAN WINKELMANDJE'
+- tapOn:
+    text: 'Je volledige naam'
+- inputRandomPersonName
+- tapOn:
+    text: 'E-mail'
+- inputRandomEmail
+- tapOn:
+    text: 'Wachtwoord'
+- inputRandomText
+- tapOn:
+    text: 'REGISTREREN MET E-MAIL'
+- tapOn:
+    text: 'AFREKENEN'
+- tapOn:
+    point: '50%,67%'
+- tapOn:
+    text: 'KAART TOEVOEGEN'
+- tapOn:
+    text: 'Kaart'
+- tapOn:
+    text: 'Kaartnummer'
+- inputText: '5555555555554444'
+- inputText: '0630'
+- inputText: '300'
+- tapOn:
+    point: '50%,89%'
+- tapOn:
+    text: 'KOOP NU'
