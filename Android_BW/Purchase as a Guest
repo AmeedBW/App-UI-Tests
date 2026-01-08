@@ -1,0 +1,84 @@
+appId: com.bloomandwild.staging
+---
+- launchApp:
+    clearState: true
+- extendedWaitUntil:
+    visible:
+      text: 'We care about your privacy'
+      optional: true
+- tapOn:
+    optional: true
+    text: 'Reject all'
+- assertVisible:
+    text: 'Show someone you care wildly'
+- tapOn:
+    text: 'Shop now'
+- assertVisible:
+    text: 'Get 15% off'
+    optional: true
+- tapOn:
+    text: 'Dismiss'
+    optional: true
+- tapOn:
+    text: 'Flowers'
+- tapOn:
+    optional: true
+    text: 'Close Subscription Card'
+- scrollUntilVisible:
+    element:
+      text: 'The Anna'
+- tapOn:
+    text: 'Send'
+- tapOn:
+    text: 'Continue without adding anything'
+    optional: true
+- tapOn:
+    text: 'Continue without adding anything'
+    optional: true
+- tapOn:
+    text: 'Recipient'
+- assertVisible:
+    id: 'com.bloomandwild.staging:id/nav_bar_title'
+- tapOn:
+    text: 'Recipient'
+- inputText: 'Guest User'
+- tapOn:
+    text: Address
+- inputText: 'bloom and wild'
+- tapOn:
+    text: 🇬🇧 Bloom & Wild, Unit W301, Vox Studios 1-45, Durham Street London, SE11 5JH
+- tapOn:
+    text: 'Save'
+- tapOn:
+    text: 'Save'
+- assertVisible:
+    id: 'com.bloomandwild.staging:id/nav_bar_title'
+- tapOn:
+    text: 'Add to basket'
+- assertVisible:
+    text: 'Register'
+- tapOn:
+    text: 'Name'
+- inputRandomPersonName
+- tapOn:
+    text: 'Email'
+- inputRandomEmail
+- tapOn:
+    text: 'Register with email'
+- tapOn:
+    text: 'Checkout'
+- tapOn:
+    point: '50%,67%'
+- tapOn:
+    text: 'Add a card'
+- tapOn:
+    text: 'Card number'
+- inputText: '5555555555554444'
+- inputText: '0533'
+- inputText: '333'
+- tapOn:
+    id: 'com.bloomandwild.staging:id/primary_button'
+- tapOn:
+    text: 'Buy now'
+- assertVisible:
+    text: 'Order Confirmation'
