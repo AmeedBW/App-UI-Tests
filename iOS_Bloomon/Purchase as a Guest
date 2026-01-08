@@ -1,0 +1,81 @@
+appId: com.bloomon.bloomonapp.dev
+---
+- launchApp:
+    clearState: true
+- assertVisible:
+    text: We hechten waarde aan je privacy
+- tapOn:
+    text: Alleen vereist
+    optional: true
+- assertVisible:
+    text: 'Ask App Not to Track'
+    optional: true
+- tapOn:
+    text: 'Allow'
+    optional: true
+- assertVisible:
+    text: 'Inloggen'
+- tapOn:
+    text: 'Shop Nu'
+- waitForAnimationToEnd
+- tapOn:
+    point: 14%,35%
+- stopApp
+- launchApp
+- waitForAnimationToEnd
+- scroll
+- tapOn:
+    id: 'sendBtn'
+- tapOn:
+    optional: true
+    text: 'VERDER NAAR BEZORGINFORMATIE'
+- tapOn:
+    text: 'VERDER NAAR BEZORGINFORMATIE'
+    optional: true
+- tapOn:
+    text: 'Ontvanger'
+- assertVisible:
+    text: 'Gegevens ontvanger'
+- tapOn:
+    id: 'recipientTextField'
+- inputText: 'Testing Maestro'
+- tapOn:
+    id: 'Done'
+- tapOn:
+    id: 'addressTextField'
+- inputText: 'Overrepenstraat 191'
+- tapOn:
+    point: '47%, 38%'
+- assertVisible:
+    text: 'Adres bevestigen'
+- tapOn:
+    text: 'OPSLAAN'
+- tapOn:
+    text: 'CONTROLEREN & BETALEN'
+- tapOn:
+    text: 'input name'
+- inputRandomPersonName
+- tapOn:
+    text: 'input email'
+- inputRandomEmail
+- tapOn:
+    text: 'AFREKENEN'
+- assertVisible:
+    text: 'Betaalopties'
+- tapOn:
+    id: 'choose payment cards subtitle'
+- assertVisible:
+    id: 'add a card header title'
+- inputText: '4242424242424242'
+- inputText: '09'
+- inputText: '29'
+- inputText: '444'
+- tapOn:
+    text: 'OPSLAAN'
+- assertVisible:
+    text: 'Mandje controleren'
+- tapOn:
+    text: 'Koop Nu'
+- waitForAnimationToEnd
+- assertVisible:
+    id: 'order success order confirmation'
