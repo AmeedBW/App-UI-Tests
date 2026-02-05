@@ -5,24 +5,16 @@ appId: com.bloomandwild.bloomandwildapp.dev
 - assertVisible:
     text: 'We care about your privacy'
 - tapOn:
-    text: 'Accept All'
-    optional: true
+    text: 'Continue'
 - assertVisible:
     text: 'Log in'
 - tapOn:
     text: 'Shop now'
-- extendedWaitUntil:
-    visible:
-      text: 'logo'
-      optional: true
-    timeout: 20000
 - tapOn:
     id: 'shop'
-- extendedWaitUntil:
-    visible:
-      text: 'Never miss a thing'
-      optional: true
-    timeout: 20000
+- assertVisible:
+    text: 'Never miss a thing'
+    optional: true
 - tapOn:
     text: 'Yes please'
     optional: true
