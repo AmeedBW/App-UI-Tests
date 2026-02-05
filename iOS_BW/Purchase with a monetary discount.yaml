@@ -5,16 +5,9 @@ appId: com.bloomandwild.bloomandwildapp.dev
 - assertVisible:
     text: 'We care about your privacy'
 - tapOn:
-    text: 'Accept All'
-    optional: true
+    text: 'Continue'
 - assertVisible:
-    text: 'Ask App Not to Track'
-    optional: true
-- tapOn:
-    text: 'Allow'
-    optional: true
-- assertVisible:
-    text: 'Shop Now'
+    text: 'Log in'
 - tapOn:
     text: 'Log in'
 - tapOn:
@@ -25,29 +18,30 @@ appId: com.bloomandwild.bloomandwildapp.dev
 - inputText: 'testpassword'
 - tapOn:
     id: 'signIn'
+- tapOn:
+    text: 'Browse'
 - assertVisible:
     text: 'Never miss a thing'
+    optional: true
 - tapOn:
     text: 'No thanks'
+    optional: true
 - tapOn:
     optional: true
     text: 'close_black_icon'
+- scroll
 - assertVisible:
     text: 'All'
-- scroll
 - tapOn:
     text: 'Send'
 - tapOn:
     text: 'Continue to delivery details'
     optional: true
 - tapOn:
-    text: "No thanks, I'm good"
+    text: 'No thanks, I''m good'
     optional: true
 - tapOn:
     text: 'Recipient'
-- tapOn:
-    text: 'Don.*Allow'
-    optional: true
 - tapOn:
     id: 'recipientTextField'
 - tapOn:
@@ -57,21 +51,13 @@ appId: com.bloomandwild.bloomandwildapp.dev
 - assertVisible:
     id: 'delivery options header title'
 - tapOn:
-    point: '26%,60%'
+    point: '26%, 60%'
 - inputText: 'lmf9q'
 - tapOn:
     id: 'Done'
 - tapOn:
-    id: 'nextButton'
-- assertVisible:
-    text: Review Basket
+    text: 'Review & pay'
 - tapOn:
-    id: 'nextButton'
-- waitForAnimationToEnd
-- extendedWaitUntil:
-    visible:
-      text: 'Thank you for your order!'
-    timeout: 45000
+    text: 'Buy Now'
 - assertVisible:
-    id: order success order confirmation
-
+    id: 'order success order confirmation'
