@@ -2,25 +2,21 @@ appId: com.bloomandwild.bloomandwildapp.dev
 ---
 - launchApp:
     clearState: true
+- assertVisible:
+    text: 'We care about your privacy'
 - tapOn:
-    text: 'Reject All'
-    optional: true
+    text: 'Continue'
 - assertVisible:
     text: 'Log in'
 - tapOn:
     text: 'Shop now'
-- extendedWaitUntil:
-    visible:
-      text: 'logo'
-      optional: true
-    timeout: 20000
+- assertVisible:
+    text: 'logo'
 - tapOn:
     id: 'shop'
-- extendedWaitUntil:
-    visible:
-      text: 'Never miss a thing'
-      optional: true
-    timeout: 20000
+- assertVisible:
+    text: 'Never miss a thing'
+    optional: true
 - tapOn:
     text: 'Yes please'
     optional: true
@@ -34,8 +30,17 @@ appId: com.bloomandwild.bloomandwildapp.dev
 - waitForAnimationToEnd
 - openLink:
     link: 'bloom://credit/conor15/tag/plants'
+- tapOn:
+    text: 'Open'
+    optional: true
 - assertVisible:
     text: 'conor15 applied successfully - 15% discount applied'
 - scroll
+- assertVisible:
+    text: 'Never miss a thing'
+    optional: true
+- tapOn:
+    text: 'No thanks'
+    optional: true
 - assertVisible:
     text: 'House Plants'
