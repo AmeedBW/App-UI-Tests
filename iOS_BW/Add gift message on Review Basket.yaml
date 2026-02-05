@@ -2,14 +2,10 @@ appId: com.bloomandwild.bloomandwildapp.dev
 ---
 - launchApp:
     clearState: true
-- tapOn:
-    text: 'Reject All'
 - assertVisible:
-    text: 'Ask App Not to Track'
-    optional: true
+    text: 'We care about your privacy'
 - tapOn:
-    text: 'Allow'
-    optional: true
+    text: 'Continue'
 - assertVisible:
     text: 'Shop Now'
 - tapOn:
@@ -27,10 +23,8 @@ appId: com.bloomandwild.bloomandwildapp.dev
     text: 'Create account'
 - tapOn:
     text: 'Continue'
-- extendedWaitUntil:
-    visible:
-      text: 'All'
-    timeout: 25000
+- tapOn:
+    text: 'Browse'
 - assertVisible:
     text: 'Never miss a thing'
     optional: true
@@ -48,27 +42,15 @@ appId: com.bloomandwild.bloomandwildapp.dev
     optional: true
 - tapOn:
     text: 'Recipient'
-- assertVisible:
-    text: 'Continue'
-    optional: true
-- tapOn:
-    text: 'Don.*Allow'
-    optional: true
 - tapOn:
     point: '50%,37%'
 - tapOn:
     text: 'Save'
 - tapOn:
     text: 'Review & pay'
-- tapOn:
-    optional: true
-    text: 'Pay with debit or credit card'
-- inputText: '4242424242424242'
-- inputText: '1138'
-- inputText: '333'
-- tapOn:
-    text: 'Save'
-    optional: true
+- scroll
+- assertVisible:
+    text: 'Edit'
 - tapOn:
     text: 'Edit'
 - tapOn:
@@ -82,3 +64,5 @@ appId: com.bloomandwild.bloomandwildapp.dev
     text: 'Continue to delivery details'
 - tapOn:
     text: 'Save and close'
+- assertVisible:
+    text: 'Review basket'
