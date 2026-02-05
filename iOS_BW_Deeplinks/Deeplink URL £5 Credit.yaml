@@ -5,24 +5,16 @@ appId: com.bloomandwild.bloomandwildapp.dev
 - assertVisible:
     text: 'We care about your privacy'
 - tapOn:
-    text: 'Accept All'
-    optional: true
+    text: 'Continue'
 - assertVisible:
     text: 'Log in'
 - tapOn:
     text: 'Shop now'
-- extendedWaitUntil:
-    visible:
-      text: 'logo'
-      optional: true
-    timeout: 20000
 - tapOn:
     id: 'shop'
-- extendedWaitUntil:
-    visible:
-      text: 'Never miss a thing'
-      optional: true
-    timeout: 20000
+- assertVisible:
+    text: 'Never miss a thing'
+    optional: true
 - tapOn:
     text: 'Yes please'
     optional: true
@@ -35,6 +27,21 @@ appId: com.bloomandwild.bloomandwildapp.dev
 - stopApp
 - waitForAnimationToEnd
 - openLink:
-    link: 'https://bloomandwild.onelink.me/I4QD/83362702?credit=LMF9Q'
+    link: 'https://bloomandwild.onelink.me/I4QD/351024de'
 - assertVisible:
-    text: 'LMF9Q applied successfully - £5 discount applied'
+    text: 'Log in to your account'
+- tapOn:
+    id: 'emailTextField'
+- inputText: 'testingdevice+androidtest1@bloomandwild.com'
+- extendedWaitUntil:
+    visible:
+      id: 'passTextField'
+- tapOn:
+    id: 'passTextField'
+- inputText: 'testpassword'
+- assertVisible:
+    text: 'Create account'
+- tapOn:
+    text: 'Continue'
+- assertVisible:
+    text: 'Occasions'
