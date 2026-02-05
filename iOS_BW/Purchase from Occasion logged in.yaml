@@ -3,16 +3,9 @@ appId: com.bloomandwild.bloomandwildapp.dev
 - launchApp:
     clearState: true
 - assertVisible:
-    text: We care about your privacy
+    text: 'We care about your privacy'
 - tapOn:
-    text: 'Accept All'
-    optional: true
-- assertVisible:
-    text: 'Ask App Not to Track'
-    optional: true
-- tapOn:
-    text: 'Allow'
-    optional: true
+    text: 'Continue'
 - assertVisible:
     text: 'Shop Now'
 - tapOn:
@@ -27,10 +20,8 @@ appId: com.bloomandwild.bloomandwildapp.dev
     text: 'Create account'
 - tapOn:
     text: 'Continue'
-- extendedWaitUntil:
-    visible:
-      text: 'All'
-    timeout: 25000
+- tapOn:
+    text: 'Browse'
 - assertVisible:
     text: 'Never miss a thing'
     optional: true
@@ -39,14 +30,13 @@ appId: com.bloomandwild.bloomandwildapp.dev
     optional: true
 - tapOn:
     id: 'home'
+- waitForAnimationToEnd
+- scroll
 - scrollUntilVisible:
     element:
-      text: 'Saved Occasions'
+      id: 'savedoccasionsIconID'
 - tapOn:
     id: 'savedoccasionsIconID'
-- tapOn:
-    text: 'Don.*Allow'
-    optional: true
 - tapOn:
     text: 'Add Occasion'
     optional: true
@@ -58,15 +48,9 @@ appId: com.bloomandwild.bloomandwildapp.dev
     id: 'arrowDate'
     optional: true
 - tapOn:
-    text: '22'
-- tapOn:
-    text: 'Don.*Allow'
-    optional: true
+    text: '18'
 - tapOn:
     text: 'Save date'
-    optional: true
-- tapOn:
-    text: 'Don.*Allow'
     optional: true
 - tapOn:
     text: 'Home'
@@ -75,18 +59,23 @@ appId: com.bloomandwild.bloomandwildapp.dev
     id: 'savedoccasionsIconID'
     optional: true
 - tapOn:
-    id: 'sendBtn'
-- extendedWaitUntil:
-    visible:
-      text: 'Never miss a thing'
-      optional: true
+    text: 'Home'
 - tapOn:
-    text: 'closeBtn'
+    id: 'savedoccasionsIconID'
+- assertVisible:
+    text: 'Your saved occasions'
+- tapOn:
+    id: 'sendBtn'
+- assertVisible:
+    text: 'Never miss a thing'
     optional: true
-- scroll
+- tapOn:
+    id: 'closeBtn'
+    optional: true
 - scroll
 - tapOn:
     text: 'Send'
+    index: 1
 - tapOn:
     text: 'Continue to delivery details'
     optional: true
@@ -95,14 +84,8 @@ appId: com.bloomandwild.bloomandwildapp.dev
     optional: true
 - tapOn:
     text: 'Recipient'
-- assertVisible:
-    text: 'Continue'
-    optional: true
 - tapOn:
-    text: 'Don.*Allow'
-    optional: true
-- tapOn:
-    point: '50%,37%'
+    point: '50%,31%'
 - tapOn:
     text: 'Save'
 - tapOn:
@@ -112,10 +95,5 @@ appId: com.bloomandwild.bloomandwildapp.dev
     optional: true
 - tapOn:
     text: 'Buy Now'
-- waitForAnimationToEnd
-- extendedWaitUntil:
-    visible:
-      text: 'Thank you for your order!'
-    timeout: 45000
 - assertVisible:
     text: 'Thank you for your order!'
