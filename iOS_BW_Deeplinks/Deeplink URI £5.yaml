@@ -2,9 +2,10 @@ appId: com.bloomandwild.bloomandwildapp.dev
 ---
 - launchApp:
     clearState: true
+- assertVisible:
+    text: 'We care about your privacy'
 - tapOn:
-    text: 'Reject All'
-    optional: true
+    text: 'Continue'
 - assertVisible:
     text: 'Log in'
 - tapOn:
@@ -16,11 +17,6 @@ appId: com.bloomandwild.bloomandwildapp.dev
     timeout: 20000
 - tapOn:
     id: 'shop'
-- extendedWaitUntil:
-    visible:
-      text: 'Never miss a thing'
-      optional: true
-    timeout: 20000
 - tapOn:
     text: 'Yes please'
     optional: true
@@ -32,8 +28,9 @@ appId: com.bloomandwild.bloomandwildapp.dev
     text: 'Send'
 - stopApp
 - waitForAnimationToEnd
-- waitForAnimationToEnd
 - openLink:
     link: 'bloom://credit/LMF9Q'
+- tapOn:
+    text: 'Open'
 - assertVisible:
     text: 'LMF9Q applied successfully - £5 discount applied'
