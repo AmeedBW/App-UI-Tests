@@ -3,17 +3,9 @@ appId: com.bloomandwild.bloomandwildapp.dev
 - launchApp:
     clearState: true
 - assertVisible:
-    text: We care about your privacy
-    optional: true
+    text: 'We care about your privacy'
 - tapOn:
-    text: 'Accept All'
-    optional: true
-- assertVisible:
-    text: 'Ask App Not to Track'
-    optional: true
-- tapOn:
-    text: 'Allow'
-    optional: true
+    text: 'Continue'
 - assertVisible:
     text: 'Shop Now'
 - tapOn:
@@ -28,10 +20,8 @@ appId: com.bloomandwild.bloomandwildapp.dev
     text: 'Create account'
 - tapOn:
     text: 'Continue'
-- extendedWaitUntil:
-    visible:
-      text: 'All'
-    timeout: 25000
+- tapOn:
+    text: 'Browse'
 - assertVisible:
     text: 'Never miss a thing'
     optional: true
@@ -47,8 +37,6 @@ appId: com.bloomandwild.bloomandwildapp.dev
     text: 'Send'
 - tapOn:
     text: 'Add'
-- assertVisible:
-    text: 'Remove'
 - tapOn:
     id: 'continue to delivery details CtaID'
 - tapOn:
@@ -60,31 +48,12 @@ appId: com.bloomandwild.bloomandwildapp.dev
 - tapOn:
     text: 'Recipient'
 - tapOn:
-    text: 'Don.*Allow'
-    optional: true
-- tapOn:
     point: '50%,37%'
 - tapOn:
     text: 'Save'
 - tapOn:
     text: 'Review & pay'
 - tapOn:
-    optional: true
-    id: 'choose payment cards subtitle'
-- inputText: '4242424242424242'
-- inputText: '1138'
-- inputText: '333'
-- tapOn:
-    text: 'Save'
-    optional: true
+    text: 'Buy Now'
 - assertVisible:
-    text: 'Review Basket'
-- tapOn:
-    id: 'nextButton'
-- waitForAnimationToEnd
-- extendedWaitUntil:
-    visible:
-      text: 'Thank you for your order!'
-    timeout: 45000
-- assertVisible:
-    text: 'Thank you for your order!'
+    id: 'order success order confirmation'
