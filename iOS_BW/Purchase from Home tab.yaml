@@ -2,9 +2,10 @@ appId: com.bloomandwild.bloomandwildapp.dev
 ---
 - launchApp:
     clearState: true
+- assertVisible:
+    text: 'We care about your privacy'
 - tapOn:
-    text: 'Reject All'
-    optional: true
+    text: 'Continue'
 - assertVisible:
     text: 'Shop Now'
 - tapOn:
@@ -15,32 +16,21 @@ appId: com.bloomandwild.bloomandwildapp.dev
 - tapOn:
     id: 'passTextField'
 - inputText: 'testpassword'
-- assertVisible:
-    text: 'Create account'
 - tapOn:
     text: 'Continue'
-- extendedWaitUntil:
-    visible:
-      text: 'All'
-    timeout: 25000
+- assertVisible:
+    text: 'logo'
+- scrollUntilVisible:
+    element:
+      text: 'Summer stems'
+- tapOn:
+    text: 'Summer stems'
 - assertVisible:
     text: 'Never miss a thing'
     optional: true
 - tapOn:
     id: 'closeBtn'
     optional: true
-- tapOn:
-    id: 'home'
-- assertVisible:
-    text: 'logo'
-- swipe:
-    direction: 'UP'
-- assertVisible:
-    text: 'Plants'
-- tapOn:
-    text: 'Plants'
-- assertVisible:
-    text: 'Plants'
 - scroll
 - tapOn:
     text: 'Send'
