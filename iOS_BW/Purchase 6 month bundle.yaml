@@ -5,13 +5,7 @@ appId: com.bloomandwild.bloomandwildapp.dev
 - assertVisible:
     text: 'We care about your privacy'
 - tapOn:
-    text: 'Reject All'
-- assertVisible:
-    text: 'Ask App Not to Track'
-    optional: true
-- tapOn:
-    text: 'Allow'
-    optional: true
+    text: 'Continue'
 - assertVisible:
     text: 'Shop Now'
 - tapOn:
@@ -26,10 +20,8 @@ appId: com.bloomandwild.bloomandwildapp.dev
     text: 'Create account'
 - tapOn:
     text: 'Continue'
-- extendedWaitUntil:
-    visible:
-      text: 'All'
-    timeout: 25000
+- tapOn:
+    text: 'Browse'
 - assertVisible:
     text: 'Never miss a thing'
     optional: true
@@ -52,7 +44,7 @@ appId: com.bloomandwild.bloomandwildapp.dev
     point: '81%, 7%'
 - scrollUntilVisible:
     element:
-      text: '6 Months of Classic Letterbox Flowers'
+      text: '3 months of Statement Letterbox Flowers'
 - tapOn:
     id: 'sendBtn'
 - tapOn:
@@ -64,31 +56,12 @@ appId: com.bloomandwild.bloomandwildapp.dev
 - tapOn:
     text: 'Recipient'
 - tapOn:
-    text: 'Don.*Allow'
-    optional: true
-- tapOn:
     point: '50%,37%'
 - tapOn:
     text: 'Save'
 - tapOn:
     text: 'Review & pay'
 - tapOn:
-    optional: true
-    id: 'choose payment cards subtitle'
-- inputText: '4242424242424242'
-- inputText: '1138'
-- inputText: '333'
-- tapOn:
-    text: 'Save'
-    optional: true
-- assertVisible:
-    text: '6 Months of Classic Letterbox Flowers'
-- tapOn:
     text: 'Buy Now'
-- waitForAnimationToEnd
-- extendedWaitUntil:
-    visible:
-      text: 'Thank you for your order!'
-    timeout: 45000
 - assertVisible:
     text: 'Thank you for your order!'
