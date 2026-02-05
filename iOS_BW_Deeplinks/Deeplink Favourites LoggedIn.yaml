@@ -5,7 +5,7 @@ appId: com.bloomandwild.bloomandwildapp.dev
 - assertVisible:
     text: 'We care about your privacy'
 - tapOn:
-    text: 'Accept All'
+    text: 'Continue'
 - assertVisible:
     text: 'Shop Now'
 - tapOn:
@@ -20,20 +20,8 @@ appId: com.bloomandwild.bloomandwildapp.dev
     text: 'Create account'
 - tapOn:
     text: 'Continue'
-- extendedWaitUntil:
-    visible:
-      text: 'Never miss a thing'
-      optional: true
-    timeout: 20000
-- tapOn:
-    text: 'Yes please'
-    optional: true
-- tapOn:
-    text: 'Allow'
-    optional: true
-- scroll
 - assertVisible:
-    text: 'Send'
+    text: 'logo'
 - stopApp
 - waitForAnimationToEnd
 - openLink:
