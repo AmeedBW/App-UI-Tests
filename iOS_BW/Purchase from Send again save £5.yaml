@@ -2,9 +2,10 @@ appId: com.bloomandwild.bloomandwildapp.dev
 ---
 - launchApp:
     clearState: true
+- assertVisible:
+    text: 'We care about your privacy'
 - tapOn:
-    text: 'Reject All'
-    optional: true
+    text: 'Continue'
 - assertVisible:
     text: 'Shop Now'
 - tapOn:
@@ -19,10 +20,8 @@ appId: com.bloomandwild.bloomandwildapp.dev
     text: 'Create account'
 - tapOn:
     text: 'Continue'
-- extendedWaitUntil:
-    visible:
-      text: 'All'
-    timeout: 25000
+- tapOn:
+    text: 'Browse'
 - assertVisible:
     text: 'Never miss a thing'
     optional: true
@@ -54,6 +53,12 @@ appId: com.bloomandwild.bloomandwildapp.dev
     text: 'Send again'
 - assertVisible:
     text: 'bw92h4p applied successfully - £5 discount applied'
+- assertVisible:
+    text: 'Never miss a thing'
+    optional: true
+- tapOn:
+    id: 'closeBtn'
+    optional: true
 - scroll
 - tapOn:
     text: 'Send'
