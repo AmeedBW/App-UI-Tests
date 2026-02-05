@@ -3,54 +3,32 @@ appId: com.bloomandwild.bloomandwildapp.dev
 - launchApp:
     clearState: true
 - assertVisible:
-    text: We care about your privacy
+    text: 'We care about your privacy'
 - tapOn:
-    text: 'Reject All'
+    text: 'Continue'
 - assertVisible:
-    text: 'Ask App Not to Track'
-    optional: true
-- tapOn:
-    text: 'Allow'
-    optional: true
-- assertVisible:
-    text: 'Shop Now'
+    text: 'Log in'
 - tapOn:
     text: 'Shop now'
-- assertVisible:
-    text: 'Saved occasions'
-    optional: true
-- tapOn:
-    text: 'Browse'
-- extendedWaitUntil:
-    visible:
-      text: 'Never miss a thing'
-      optional: true
-    timeout: 20000
-- tapOn:
-    text: 'Yes please'
-    optional: true
-- extendedWaitUntil:
-    visible:
-      text: 'logo'
-      optional: true
-    timeout: 10000
 - tapOn:
     id: 'shop'
+- assertVisible:
+    text: 'Never miss a thing'
+    optional: true
 - tapOn:
     text: 'Yes please'
     optional: true
 - tapOn:
     text: 'Allow'
     optional: true
-- extendedWaitUntil:
-    visible:
-      text: 'Send'
-    timeout: 40000
+- scroll
+- assertVisible:
+    text: 'Send'
 - stopApp
+- waitForAnimationToEnd
 - openLink:
     link: 'bloom://credit/conor15'
-- extendedWaitUntil:
-    visible:
-      text: 'conor15 applied successfully - 15% discount applied'
+- tapOn:
+    text: 'Open'
 - assertVisible:
     text: 'conor15 applied successfully - 15% discount applied'
