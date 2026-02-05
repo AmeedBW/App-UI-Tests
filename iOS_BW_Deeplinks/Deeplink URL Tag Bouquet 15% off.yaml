@@ -14,11 +14,9 @@ appId: com.bloomandwild.bloomandwildapp.dev
     text: 'logo'
 - tapOn:
     id: 'shop'
-- extendedWaitUntil:
-    visible:
-      text: 'Never miss a thing'
-      optional: true
-    timeout: 20000
+- assertVisible:
+    text: 'Never miss a thing'
+    optional: true
 - tapOn:
     text: 'Yes please'
     optional: true
